@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fond du bouton -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#333333" />
+            <size android:width="50dp" android:height="50dp" />
+        </shape>
+    </item>
+
+    <!-- Fond lorsqu'il est pressé -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#FFA500" />
+            <size android:width="50dp" android:height="50dp" />
+        </shape>
+    </item>
+
+    <!-- Icône "+" -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/ic_plus" />
+    </item>
+</layer-list>

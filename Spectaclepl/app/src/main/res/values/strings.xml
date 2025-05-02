@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Spectacleplus</string>
+    <string name="places_disponibles">Places disponibles : %d</string>
+    <string name="location_permission_required">Location permission is required to show the venue on map</string>
+    <string name="underline_text"><u>Se connecter</u></string>
+    <string name="lieu_underline"><u>lieu_spectacle</u></string>
+    <string name="forgot_password"><u>Mot de passe oublié ?</u></string>
+
+
+    <string-array name="filterType">
+        <item>Titre</item>
+        <item>Date</item>
+        <item>Lieu</item>
+        <item>Localisation</item>
+
+
+    </string-array>
+
+</resources>
+
+

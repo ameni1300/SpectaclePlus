@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        >
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="210dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_1" />
+
+        <ImageView
+            android:id="@+id/image_spectacle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/titre_spectacle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Titre du Spectacle"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/places_dispo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 places disponibles"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/coordonne"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vous devez remplir tous les champs pour accéder à la page de paiement."
+            android:textSize="13dp"
+            android:textColor="#6A6767" />
+
+        <EditText
+            android:id="@+id/input_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entrez votre nom complet"
+            android:textColorHint="#504A4A"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entrez votre e-mail"
+            android:textColorHint="#504A4A"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:padding="10dp"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/input_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Entrez votre numéro de téléphone"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#504A4A" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_moins"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:background="@drawable/img_3" />
+
+            <TextView
+                android:id="@+id/ticket_count_text"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="25sp"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btn_plus"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:background="@drawable/img_2"
+                android:contentDescription="Ajouter un ticket" />
+        </LinearLayout>
+
+
+        <!-- Section mon ticket -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ticket"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <!-- Colonne gauche : détails du spectacle -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ticket_detailstitre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spectacle: Zamaken"
+                    android:textSize="14sp"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ticket_count_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ticket Count: "
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#42FF00" />
+
+                    <TextView
+                        android:id="@+id/totalticket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#42FF00"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/session_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Session: 20:30"
+                    android:textSize="12sp"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/session_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date: 15/07/2002"
+                    android:textSize="12sp"
+                    android:textColor="@color/white" />
+
+
+
+                <TextView
+                    android:id="@+id/theater_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lieu: Place des Nations Unies"
+                    android:textSize="12sp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <!-- Séparation verticale -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@color/white" />
+
+            <!-- Colonne droite : Montant total -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Montant Total"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15DT"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#42FF00" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bouton_paiement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Options de paiement"
+            android:backgroundTint="#117812"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:enabled="false"/>
+
+    </LinearLayout>
+</ScrollView>

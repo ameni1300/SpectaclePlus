@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Bonjour"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:layout_marginLeft="-30dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/img"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:clickable="true"
+                android:focusable="true"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="Profitez de votre spectacle préféré"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#AAAAAA"/>
+
+
+        <!-- Barre de recherche + Spinner dans un même style -->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/search_background"
+            android:layout_margin="15dp"
+            android:paddingHorizontal="10dp"
+            android:gravity="center_vertical">
+
+            <!-- Icône loupe -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_search"
+
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Champ de recherche -->
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Rechercher un spectacle selon..."
+                android:textColorHint="#807D7D"
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:padding="0dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <!-- Séparateur -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="#666666"/>
+
+            <!-- Spinner -->
+            <Spinner
+                android:id="@+id/filter_spinner"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:entries="@array/filterType"
+                android:popupBackground="@drawable/spinner_dropdown_background"
+
+                android:background="@android:color/transparent"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+
+        <!-- Section Stand-up / Comédie -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stand-up / Comédie"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_Comédie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:padding="10dp"/>
+
+        <!-- Section Concert musical -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Concert musical"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_mmusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:padding="10dp"/>
+
+        <!-- Section Pièce de théâtre comique -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pièce de théâtre"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_theatre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/image_spectacle"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Titre + places -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/titre_spectacle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Titre du Spectacle"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/places_dispo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 places"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+
+
+        <!-- Infos (heure, date, prix, lieu) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="#2A2A2A"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="40dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="16dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#2A2A2A"
+            android:elevation="4dp">
+
+            <!-- Heure -->
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date :"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"/>
+            <Spinner
+                android:id="@+id/spinner_date"
+                style="@style/WhiteSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"/>
+
+            <!-- Heure -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heure de début :"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"/>
+            <Spinner
+                android:id="@+id/spinner_heure"
+                style="@style/WhiteSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"
+                />
+
+            <!-- Prix -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prix :"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:id="@+id/prix_spectacle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="25DT"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="12dp"/>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lieu :"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/lieu_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_12"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_lieu"
+                    style="@style/WhiteSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    />
+
+            </LinearLayout>
+<!--            <<TextView
+                android:id="@+id/det"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text="(Clicker sur le lieu voir la localisation sur google maps)"
+           android:textColor="#91F6FF"/>-->
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/gif_animation"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Animation promotionnelle" />
+        <!-- Description -->
+
+        <TextView
+            android:id="@+id/description_spectacle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description du spectacle..."
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginBottom="-5dp" />
+
+        <!-- Bouton d'achat -->
+        <Button
+            android:id="@+id/bouton_achat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acheter un ticket"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:backgroundTint="#117812"
+            android:padding="16dp"/>
+    </LinearLayout>
+</ScrollView>

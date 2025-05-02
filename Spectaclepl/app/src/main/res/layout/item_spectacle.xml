@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="160dp"
+android:layout_height="260dp"
+android:orientation="vertical"
+android:padding="8dp">
+
+<ImageView
+    android:id="@+id/iv_image"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:scaleType="centerCrop"
+    />
+
+<TextView
+    android:id="@+id/tv_titre"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Titre du spectacle"
+    android:textStyle="bold"
+    android:textColor="#EFE2E2"
+    android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_artiste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nomArtiste"
+        android:textColor="#EFE2E2"
+
+        android:textSize="14sp"/>
+<TextView
+        android:id="@+id/spectacle_date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Date"
+    android:textSize="14sp"
+    android:textColor="#EFE2E2" />
+
+
+    <TextView
+        android:id="@+id/spectacle_localisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="localisation"
+        android:textColor="#EFE2E2"
+
+        android:textSize="14sp" />
+</LinearLayout>

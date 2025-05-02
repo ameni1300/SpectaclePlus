@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#000000"
+    android:padding="24dp">
+
+    <!-- Étapes avec icônes -->
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_9" />
+
+
+    <!-- Icône de succès -->
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/img_8" />
+
+    <!-- Titre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paiement réussi"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp" />
+
+    <!-- Message -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nous vous avons envoyé une copie de votre ticket par courriel.\nVous pouvez consulter votre billet dans la page suivante :)"
+        android:textColor="#CCCCCC"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp" />
+
+    <!-- Boutons -->
+    <Button
+        android:id="@+id/btnVoirTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voir le Ticket"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#117812"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnRetourAccueil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retour à l'accueil"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1A1A1A" />
+</LinearLayout>
